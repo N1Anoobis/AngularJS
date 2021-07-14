@@ -11,4 +11,18 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+}])
+.controller("myApp", [
+  "$scope",
+  function ($scope) {
+   
+    $scope.menu = {
+      // "color": "white",
+      // "background-color": "gray",
+      'background-color': 'red',
+      'color': 'orange',
+      'padding': '10px'
+
+  }
+  },
+]);

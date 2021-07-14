@@ -1,14 +1,14 @@
 {
-  "name": "angular-seed",
+  "name": "contactlist",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "AngularJS project",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.7.5",
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",
+    "firebase": "*",
     "html5-boilerplate": "0.0.1"
   },
   "devDependencies": {
