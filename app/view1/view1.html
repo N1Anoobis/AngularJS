@@ -1,9 +1,21 @@
 <div ng-style="content">
-<input ng-style="input" type="text" ng-model="search">
-
-<ul >
-    <li ng-repeat="ninja in ninjas | orderBy:'-name' | filter: search">
+  <input ng-style="input" type="text" ng-model="search" />
+  <div>
+    <button ng-click="order = 'name'">by name</button
+    ><button ng-click="order = 'belt'">by belt</button>
+  </div>
+  <ul>
+    <li ng-repeat="ninja in ninjas | orderBy: order | filter: search">
+      <div ng-attr-style="background-color: {{ninja.belt}}">
         {{ninja.name}} - {{ninja.rate | currency}}
+        <div ng-style="cross" ng-click="removeNinja(ninja)">X</div>
+      </div>
     </li>
-</ul>
+  </ul>
+  <form ng-submit="addNinja()">
+    <input type="text" placeholder="name" ng-model="newNinja.name"/>
+    <input type="text" placeholder="belt" ng-model="newNinja.belt"/>
+    <input type="text" placeholder="rate" ng-model="newNinja.rate"/>
+    <input type="submit" value="Add new ninja"/>
+  </form>
 </div>
