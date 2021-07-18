@@ -9,6 +9,7 @@ angular
       $routeProvider.when("/view1", {
         templateUrl: "view1/view1.html",
         controller: "View1Ctrl",
+        
       });
     },
   ])
@@ -65,7 +66,7 @@ angular
         display: "flex",
         "flex-direction": "column",
         "align-items": "center",
-        "min-height": "97vh",
+        "min-height": "95vh",
       };
 
       $scope.input = {

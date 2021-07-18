@@ -1,4 +1,4 @@
-<div ng-style="content">
+<div ng-style="content" class="main content">
   <input ng-style="input" type="text" ng-model="search" />
   <div>
     <button ng-click="order = 'name'">by name</button
@@ -6,9 +6,9 @@
   </div>
   <ul>
     <li ng-repeat="ninja in ninjas | orderBy: order | filter: search">
-      <div ng-attr-style="background-color: {{ninja.belt}}">
+      <div ng-attr-style="background-color: {{ninja.belt}}" class="belt"> 
         {{ninja.name}} - {{ninja.rate | currency}}
-        <div ng-style="cross" ng-click="removeNinja(ninja)">X</div>
+        <div ng-style="cross" ng-click="removeNinja(ninja)" class="remove">X</div>
       </div>
     </li>
   </ul>
@@ -19,3 +19,117 @@
     <input type="submit" value="Add new ninja"/>
   </form>
 </div>
+
+<style>
+
+
+.belt{
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+main{
+  background: #eee;
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.content{
+  padding: 20px;
+  margin-top: -33px;
+ 
+}
+
+.content button,
+.content input[type="submit"]{
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #777;
+  border: 0;
+  box-shadow: 2px 2px 2px rgba(20,20,20,0.1);
+  font-size: 16px;
+  margin: 0 15px;
+  margin-top: 15px;
+}
+
+.content button:hover {
+  background-color: orange;
+  color: red;
+}
+
+.content button:nth-child(2){
+  float: right;
+}
+
+.content ul{
+  padding: 0;
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+.content li{
+  padding: 15px 0;
+  border-top: 1px solid #e2e2e2;
+  color: #444;
+}
+
+.content li span{
+  float: right;
+}
+
+.content li h3{
+  display: inline-block;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.content input{
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin: 10px 0;
+}
+
+.content input[type="submit"]:last-child{
+  width: 150px;
+  display: block;
+  margin: 15px auto;
+}
+
+.remove{
+  float: left;
+  padding: 5px;
+  background: #fff;
+  width: 18px;
+  text-align: left;
+  border-radius: 20px;
+  color: crimson;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 1s;
+}
+
+.remove:hover{
+  float: left;
+  padding: 5px;
+  background: #fff;
+  width: 18px;
+  text-align: left;
+  border-radius: 0;
+  color: orange;
+  background-color: aqua;
+  transform: rotate(720deg);
+}
+</style>

@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
-  'myApp.version'
+  'myApp.version',
+  'ngAnimate'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
@@ -21,7 +22,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
       // "background-color": "gray",
       'background-color': 'red',
       'color': 'orange',
-      'padding': '10px'
+      'margin': '0'
 
   }
   },
