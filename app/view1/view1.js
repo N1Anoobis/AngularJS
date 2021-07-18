@@ -17,6 +17,7 @@ angular
   .controller("View1Ctrl", [
     "$scope",
     function ($scope) {
+     
       $scope.removeNinja = function (ninja) {
         const removedNinja = $scope.ninjas.indexOf(ninja);
         $scope.ninjas.splice(removedNinja, 1);
