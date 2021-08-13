@@ -61,14 +61,6 @@ angular
           available: true,
         },
       ];
-      $scope.content = {
-        color: "orange",
-        "background-color": "gray",
-        display: "flex",
-        "flex-direction": "column",
-        "align-items": "center",
-        "min-height": "95vh",
-      };
 
       $scope.input = {
         margin: "0 auto",

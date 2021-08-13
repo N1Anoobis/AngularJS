@@ -45,8 +45,15 @@ main{
 
 .content{
   padding: 20px;
-  margin-top: -33px;
- 
+  /* margin-top: -33px; */
+  /* display: inline-flex; */
+ /* flex-direction: column;  */
+ min-height: 95vh;
+ /* justify-content: space-evenly; */
+}
+
+body > div.ng-scope > div > ul {
+  flex-direction: column;
 }
 
 .content button,
@@ -132,5 +139,37 @@ main{
   color: orange;
   background-color: aqua;
   transform: rotate(720deg);
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  /* min-height: 100vh; */
+  background: #2f3542;
+  color: #dfe4ea;
+}
+body ul {
+  min-width: 100%;
+  display: flex;
+  padding: 0;margin: 0 auto;
+  list-style: none;
+  height: 30px;
+  align-items: center;
+}
+
+li:hover{
+  background-color: orange;
+  color: red;
+  border-radius: 5px;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 80%;
+transform: translateX(-50%);
 }
 </style>
